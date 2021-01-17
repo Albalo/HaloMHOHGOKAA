@@ -1,0 +1,27 @@
+﻿  Bones.cpp
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\src\bones.cpp(8): fatal error C1083: No se puede abrir el archivo incluir: 'Headers/Bones.h': No such file or directory
+  Box.cpp
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\src\box.cpp(1): fatal error C1083: No se puede abrir el archivo incluir: 'Headers/Box.h': No such file or directory
+  Cylinder.cpp
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\src\cylinder.cpp(1): fatal error C1083: No se puede abrir el archivo incluir: 'Headers/Cylinder.h': No such file or directory
+  FirstPersonCamera.cpp
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\src\firstpersoncamera.cpp(1): fatal error C1083: No se puede abrir el archivo incluir: 'Headers/FirstPersonCamera.h': No such file or directory
+  Mesh.cpp
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\src\mesh.cpp(8): fatal error C1083: No se puede abrir el archivo incluir: 'Headers/Mesh.h': No such file or directory
+  Model.cpp
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\src\model.cpp(8): fatal error C1083: No se puede abrir el archivo incluir: 'Headers/Model.h': No such file or directory
+  Shader.cpp
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\src\shader.cpp(1): fatal error C1083: No se puede abrir el archivo incluir: 'Headers/Shader.h': No such file or directory
+  ShadowBox.cpp
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\src\shadowbox.cpp(1): fatal error C1083: No se puede abrir el archivo incluir: 'Headers/ShadowBox.h': No such file or directory
+  Sphere.cpp
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\src\sphere.cpp(1): fatal error C1083: No se puede abrir el archivo incluir: 'Headers/Sphere.h': No such file or directory
+  Terrain.cpp
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\src\terrain.cpp(8): fatal error C1083: No se puede abrir el archivo incluir: 'Headers/Terrain.h': No such file or directory
+  Texture.cpp
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\src\texture.cpp(8): fatal error C1083: No se puede abrir el archivo incluir: 'Headers/Texture.h': No such file or directory
+  ThirdPersonCamera.cpp
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\src\thirdpersoncamera.cpp(1): fatal error C1083: No se puede abrir el archivo incluir: 'Headers/ThirdPersonCamera.h': No such file or directory
+  TimeManager.cpp
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\src\timemanager.cpp(1): fatal error C1083: No se puede abrir el archivo incluir: 'Headers/TimeManager.h': No such file or directory
+  Generando código...
