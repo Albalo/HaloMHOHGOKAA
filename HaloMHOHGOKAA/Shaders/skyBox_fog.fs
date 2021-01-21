@@ -10,8 +10,8 @@ uniform vec3 fogColor;
 
 void main()
 {
-    vec4 finalColor = texture(skybox, our_uv);
-    float factor = (our_uv.y - lowerLimit) / (upperLimit - lowerLimit);
-    factor = clamp(factor, 0.0, 1.0);
-    color = mix(vec4(fogColor, 1.0), finalColor, factor);
+    color = texture(skybox, our_uv);
+	float factor = (our_uv.y - lowerLimit) / (upperLimit - lowerLimit);
+	factor = clamp(factor, 0.0, 1.0);
+	color = mix(vec4(fogColor, 1.0), color, factor);
 }

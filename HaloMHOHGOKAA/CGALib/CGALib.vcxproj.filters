@@ -15,62 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Headers\AbstractModel.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Headers\AnimationUtils.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Headers\Bones.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Headers\Box.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Headers\Camera.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Headers\Colisiones.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Headers\Cylinder.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Headers\FirstPersonCamera.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Headers\mathUtil.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Headers\Mesh.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Headers\Model.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Headers\Shader.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Headers\ShadowBox.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Headers\Sphere.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Headers\Terrain.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Headers\Texture.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Headers\ThirdPersonCamera.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Headers\TimeManager.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="src\Bones.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
@@ -92,9 +36,6 @@
     <ClCompile Include="src\Shader.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="src\ShadowBox.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="src\Sphere.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
@@ -110,6 +51,65 @@
     <ClCompile Include="src\TimeManager.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="src\ShadowBox.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Headers\AbstractModel.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Headers\AnimationUtils.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Headers\Bones.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Headers\Box.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Headers\Camera.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Headers\Cylinder.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Headers\FirstPersonCamera.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Headers\mathUtil.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Headers\Mesh.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Headers\Model.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Headers\Shader.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Headers\Sphere.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Headers\Terrain.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Headers\Texture.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Headers\ThirdPersonCamera.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Headers\TimeManager.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Headers\Colisiones.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Headers\ShadowBox.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Shaders\colorShader.fs">
@@ -118,19 +118,13 @@
     <None Include="..\Shaders\colorShader.vs">
       <Filter>Archivos de recursos</Filter>
     </None>
-    <None Include="..\Shaders\depthTesting.fs">
+    <None Include="..\Shaders\cubeTexture.fs">
       <Filter>Archivos de recursos</Filter>
     </None>
-    <None Include="..\Shaders\depthTesting.vs">
+    <None Include="..\Shaders\cubeTexture.vs">
       <Filter>Archivos de recursos</Filter>
     </None>
     <None Include="..\Shaders\iluminacion_textura_animation.vs">
-      <Filter>Archivos de recursos</Filter>
-    </None>
-    <None Include="..\Shaders\iluminacion_textura_animation_fog.vs">
-      <Filter>Archivos de recursos</Filter>
-    </None>
-    <None Include="..\Shaders\iluminacion_textura_animation_shadow.vs">
       <Filter>Archivos de recursos</Filter>
     </None>
     <None Include="..\Shaders\iluminacion_texture_res.vs">
@@ -139,13 +133,28 @@
     <None Include="..\Shaders\multipleLights.fs">
       <Filter>Archivos de recursos</Filter>
     </None>
+    <None Include="..\Shaders\terrain.fs">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="..\Shaders\terrain.vs">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="..\Shaders\depthTesting.fs">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="..\Shaders\depthTesting.vs">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="..\Shaders\iluminacion_textura_animation_fog.vs">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="..\Shaders\iluminacion_textura_animation_shadow.vs">
+      <Filter>Archivos de recursos</Filter>
+    </None>
     <None Include="..\Shaders\multipleLights_fog.fs">
       <Filter>Archivos de recursos</Filter>
     </None>
     <None Include="..\Shaders\multipleLights_shadow.fs">
-      <Filter>Archivos de recursos</Filter>
-    </None>
-    <None Include="..\Shaders\multipleLightsEjemplo.fs">
       <Filter>Archivos de recursos</Filter>
     </None>
     <None Include="..\Shaders\particlesFire.fs">
@@ -175,12 +184,6 @@
     <None Include="..\Shaders\skyBox_fog.fs">
       <Filter>Archivos de recursos</Filter>
     </None>
-    <None Include="..\Shaders\terrain.fs">
-      <Filter>Archivos de recursos</Filter>
-    </None>
-    <None Include="..\Shaders\terrain.vs">
-      <Filter>Archivos de recursos</Filter>
-    </None>
     <None Include="..\Shaders\terrain_fog.fs">
       <Filter>Archivos de recursos</Filter>
     </None>
@@ -197,6 +200,9 @@
       <Filter>Archivos de recursos</Filter>
     </None>
     <None Include="..\Shaders\texturizado_depth_view.fs">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="..\Shaders\multipleLightsEjemplo.fs">
       <Filter>Archivos de recursos</Filter>
     </None>
   </ItemGroup>

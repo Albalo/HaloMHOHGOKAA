@@ -1,2 +1,2 @@
 ﻿  main.cpp
-c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\main.cpp(4): fatal error C1083: No se puede abrir el archivo incluir: 'GL/glew.h': No such file or directory
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(4): fatal error C1083: No se puede abrir el archivo incluir: 'GL/glew.h': No such file or directory

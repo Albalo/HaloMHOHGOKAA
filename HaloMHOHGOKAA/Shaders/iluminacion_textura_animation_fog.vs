@@ -47,6 +47,6 @@ void main(){
 	our_uv.x += offsetX.x;
 	our_uv.y += offsetX.y;
 	float distance = length(fragPosViewSpace);
-	visibility = exp(-pow((distance * density), gradient));
+	visibility = exp(-pow( (distance * density), gradient));
 	visibility = clamp(visibility, 0.0, 1.0);
 }
