@@ -87,7 +87,7 @@ Model modelA2Animate;
 //2B
 Model model2BAnimate;
 // Terrain model instance
-Terrain terrain(-1, -1, 200, 80, "../Textures/MiMapaAlturas.png");
+Terrain terrain(-1, -1, 200, 20, "../Textures/MapaAlturasProyecto.png");
 
 GLuint textureCespedID, textureWallID, textureWindowID, textureHighwayID, textureLandingPadID;
 GLuint textureTerrainBackgroundID, textureTerrainRID, textureTerrainGID, textureTerrainBID, textureTerrainBlendMapID;
