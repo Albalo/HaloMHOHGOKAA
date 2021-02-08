@@ -87,7 +87,7 @@ Model modelA2Animate;
 //2B
 Model model2BAnimate;
 // Terrain model instance
-Terrain terrain(-1, -1, 200, 20, "../Textures/MapaAlturasProyecto.png");
+Terrain terrain(-1, -1, 200, 10, "../Textures/MapaAlturasProyecto.png");
 
 GLuint textureCespedID, textureWallID, textureWindowID, textureHighwayID, textureLandingPadID;
 GLuint textureTerrainBackgroundID, textureTerrainRID, textureTerrainGID, textureTerrainBID, textureTerrainBlendMapID;
@@ -101,12 +101,12 @@ GL_TEXTURE_CUBE_MAP_NEGATIVE_Y,
 GL_TEXTURE_CUBE_MAP_POSITIVE_Z,
 GL_TEXTURE_CUBE_MAP_NEGATIVE_Z };
 
-std::string fileNames[6] = { "../Textures/mp_bloodvalley/blood-valley_ft.tga",
-		"../Textures/mp_bloodvalley/blood-valley_bk.tga",
-		"../Textures/mp_bloodvalley/blood-valley_up.tga",
-		"../Textures/mp_bloodvalley/blood-valley_dn.tga",
-		"../Textures/mp_bloodvalley/blood-valley_rt.tga",
-		"../Textures/mp_bloodvalley/blood-valley_lf.tga" };
+std::string fileNames[6] = { "../Textures/HaloSpaceSkybox/skybox_front.png",
+		"../Textures/HaloSpaceSkybox/skybox_back.png",
+		"../Textures/HaloSpaceSkybox/skybox_up.png",
+		"../Textures/HaloSpaceSkybox/skybox_down.png",
+		"../Textures/HaloSpaceSkybox/skybox_right.png",
+		"../Textures/HaloSpaceSkybox/skybox_left.png" };
 
 bool exitApp = false;
 int lastMousePosX, offsetX = 0;
@@ -492,7 +492,7 @@ void init(int width, int height, std::string strTitle, bool bFullScreen) {
 	textureLandingPad.freeImage(bitmap);
 
 	// Definiendo la textura a utilizar
-	Texture textureTerrainBackground("../Textures/texturaTrebol.jpg");
+	Texture textureTerrainBackground("../Textures/HaloEspacioEjemplo.jpg");
 	// Carga el mapa de bits (FIBITMAP es el tipo de dato de la libreria)
 	bitmap = textureTerrainBackground.loadImage();
 	// Convertimos el mapa de bits en un arreglo unidimensional de tipo unsigned char
@@ -591,7 +591,7 @@ void init(int width, int height, std::string strTitle, bool bFullScreen) {
 	textureTerrainG.freeImage(bitmap);
 
 	// Definiendo la textura a utilizar
-	Texture textureTerrainB("../Textures/texturaCamino.jpg");
+	Texture textureTerrainB("../Textures/HaloPisoEjemplo.jpg");
 	// Carga el mapa de bits (FIBITMAP es el tipo de dato de la libreria)
 	bitmap = textureTerrainB.loadImage();
 	// Convertimos el mapa de bits en un arreglo unidimensional de tipo unsigned char
@@ -624,7 +624,7 @@ void init(int width, int height, std::string strTitle, bool bFullScreen) {
 	textureTerrainB.freeImage(bitmap);
 
 	// Definiendo la textura a utilizar
-	Texture textureTerrainBlendMap("../Textures/MapaAlturas.png");
+	Texture textureTerrainBlendMap("../Textures/BlendMapaProyecto.png");
 	// Carga el mapa de bits (FIBITMAP es el tipo de dato de la libreria)
 	bitmap = textureTerrainBlendMap.loadImage();
 	// Convertimos el mapa de bits en un arreglo unidimensional de tipo unsigned char
