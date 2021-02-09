@@ -1,205 +1,205 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: El directorio intermedio (Release\) contiene archivos compartidos de otro proyecto (14-OpenAL.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
   main.cpp
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(264): warning C4251: 'AbstractModel::position': struct 'glm::vec<3,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AbstractModel'
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(418): note: vea la declaración de 'glm::vec<3,float,0>'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(265): warning C4251: 'AbstractModel::scale': struct 'glm::vec<3,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AbstractModel'
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(418): note: vea la declaración de 'glm::vec<3,float,0>'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(266): warning C4251: 'AbstractModel::color': struct 'glm::vec<4,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AbstractModel'
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(419): note: vea la declaración de 'glm::vec<4,float,0>'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(267): warning C4251: 'AbstractModel::orientation': struct 'glm::vec<3,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AbstractModel'
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(418): note: vea la declaración de 'glm::vec<3,float,0>'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(269): warning C4251: 'AbstractModel::vertexArray': class 'std::vector<AbstractModel::Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AbstractModel'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(264): warning C4251: 'AbstractModel::position': struct 'glm::vec<3,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AbstractModel'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(418): note: vea la declaración de 'glm::vec<3,float,0>'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(265): warning C4251: 'AbstractModel::scale': struct 'glm::vec<3,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AbstractModel'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(418): note: vea la declaración de 'glm::vec<3,float,0>'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(266): warning C4251: 'AbstractModel::color': struct 'glm::vec<4,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AbstractModel'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(419): note: vea la declaración de 'glm::vec<4,float,0>'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(267): warning C4251: 'AbstractModel::orientation': struct 'glm::vec<3,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AbstractModel'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(418): note: vea la declaración de 'glm::vec<3,float,0>'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(269): warning C4251: 'AbstractModel::vertexArray': class 'std::vector<AbstractModel::Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AbstractModel'
           with
           [
               _Ty=AbstractModel::Vertex
           ]
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(245): note: vea la declaración de 'std::vector<AbstractModel::Vertex,std::allocator<_Ty>>'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(245): note: vea la declaración de 'std::vector<AbstractModel::Vertex,std::allocator<_Ty>>'
           with
           [
               _Ty=AbstractModel::Vertex
           ]
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(270): warning C4251: 'AbstractModel::index': class 'std::vector<GLuint,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AbstractModel'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(270): warning C4251: 'AbstractModel::index': class 'std::vector<GLuint,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AbstractModel'
           with
           [
               _Ty=GLuint
           ]
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(270): note: vea la declaración de 'std::vector<GLuint,std::allocator<_Ty>>'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(270): note: vea la declaración de 'std::vector<GLuint,std::allocator<_Ty>>'
           with
           [
               _Ty=GLuint
           ]
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(271): warning C4251: 'AbstractModel::aabb': class 'AbstractModel::AABB' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AbstractModel'
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(65): note: vea la declaración de 'AbstractModel::AABB'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(272): warning C4251: 'AbstractModel::sbb': class 'AbstractModel::SBB' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AbstractModel'
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(51): note: vea la declaración de 'AbstractModel::SBB'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(273): warning C4251: 'AbstractModel::obb': class 'AbstractModel::OBB' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AbstractModel'
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(94): note: vea la declaración de 'AbstractModel::OBB'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(75): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(271): warning C4251: 'AbstractModel::aabb': class 'AbstractModel::AABB' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AbstractModel'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(65): note: vea la declaración de 'AbstractModel::AABB'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(272): warning C4251: 'AbstractModel::sbb': class 'AbstractModel::SBB' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AbstractModel'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(51): note: vea la declaración de 'AbstractModel::SBB'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(273): warning C4251: 'AbstractModel::obb': class 'AbstractModel::OBB' necesita tener una interfaz DLL para que la utilicen los clientes de class 'AbstractModel'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(94): note: vea la declaración de 'AbstractModel::OBB'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(75): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
           with
           [
               T=float
           ]
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(76): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(76): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
           with
           [
               T=float
           ]
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(77): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(77): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
           with
           [
               T=float
           ]
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(78): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(78): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
           with
           [
               T=float
           ]
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(79): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(79): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
           with
           [
               T=float
           ]
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(80): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(80): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
           with
           [
               T=float
           ]
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\sphere.h(39): warning C4251: 'Sphere::sbb': class 'AbstractModel::SBB' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Sphere'
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(51): note: vea la declaración de 'AbstractModel::SBB'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\box.h(37): warning C4251: 'Box::aabb': class 'AbstractModel::AABB' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Box'
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(65): note: vea la declaración de 'AbstractModel::AABB'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\camera.h(111): warning C4251: 'Camera::position': struct 'glm::vec<3,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(418): note: vea la declaración de 'glm::vec<3,float,0>'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\camera.h(112): warning C4251: 'Camera::front': struct 'glm::vec<3,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(418): note: vea la declaración de 'glm::vec<3,float,0>'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\camera.h(113): warning C4251: 'Camera::up': struct 'glm::vec<3,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(418): note: vea la declaración de 'glm::vec<3,float,0>'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\camera.h(114): warning C4251: 'Camera::right': struct 'glm::vec<3,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(418): note: vea la declaración de 'glm::vec<3,float,0>'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\camera.h(115): warning C4251: 'Camera::worldUp': struct 'glm::vec<3,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(418): note: vea la declaración de 'glm::vec<3,float,0>'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\camera.h(117): warning C4251: 'Camera::cameraTarget': struct 'glm::vec<3,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(418): note: vea la declaración de 'glm::vec<3,float,0>'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\texture.h(66): warning C4251: 'Texture::m_fileName': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Texture'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\sphere.h(39): warning C4251: 'Sphere::sbb': class 'AbstractModel::SBB' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Sphere'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(51): note: vea la declaración de 'AbstractModel::SBB'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\box.h(37): warning C4251: 'Box::aabb': class 'AbstractModel::AABB' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Box'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\abstractmodel.h(65): note: vea la declaración de 'AbstractModel::AABB'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\camera.h(111): warning C4251: 'Camera::position': struct 'glm::vec<3,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(418): note: vea la declaración de 'glm::vec<3,float,0>'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\camera.h(112): warning C4251: 'Camera::front': struct 'glm::vec<3,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(418): note: vea la declaración de 'glm::vec<3,float,0>'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\camera.h(113): warning C4251: 'Camera::up': struct 'glm::vec<3,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(418): note: vea la declaración de 'glm::vec<3,float,0>'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\camera.h(114): warning C4251: 'Camera::right': struct 'glm::vec<3,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(418): note: vea la declaración de 'glm::vec<3,float,0>'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\camera.h(115): warning C4251: 'Camera::worldUp': struct 'glm::vec<3,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(418): note: vea la declaración de 'glm::vec<3,float,0>'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\camera.h(117): warning C4251: 'Camera::cameraTarget': struct 'glm::vec<3,float,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(418): note: vea la declaración de 'glm::vec<3,float,0>'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\texture.h(66): warning C4251: 'Texture::m_fileName': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Texture'
   c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xstring(4373): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\texture.h(69): warning C4251: 'Texture::type': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Texture'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\texture.h(69): warning C4251: 'Texture::type': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Texture'
   c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xstring(4373): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\bones.h(111): warning C4251: 'Bones::m_BoneMapping': class 'std::map<std::string,unsigned int,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Bones'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\bones.h(111): warning C4251: 'Bones::m_BoneMapping': class 'std::map<std::string,unsigned int,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Bones'
           with
           [
               _Kty=std::string,
               _Ty=unsigned int
           ]
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\bones.h(111): note: vea la declaración de 'std::map<std::string,unsigned int,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\bones.h(111): note: vea la declaración de 'std::map<std::string,unsigned int,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
           with
           [
               _Kty=std::string,
               _Ty=unsigned int
           ]
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\bones.h(112): warning C4251: 'Bones::m_BoneInfo': class 'std::vector<Bones::BoneInfo,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Bones'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\bones.h(112): warning C4251: 'Bones::m_BoneInfo': class 'std::vector<Bones::BoneInfo,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Bones'
           with
           [
               _Ty=Bones::BoneInfo
           ]
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\bones.h(112): note: vea la declaración de 'std::vector<Bones::BoneInfo,std::allocator<_Ty>>'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\bones.h(112): note: vea la declaración de 'std::vector<Bones::BoneInfo,std::allocator<_Ty>>'
           with
           [
               _Ty=Bones::BoneInfo
           ]
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\bones.h(113): warning C4251: 'Bones::bones': class 'std::vector<Bones::VertexBoneData,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Bones'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\bones.h(113): warning C4251: 'Bones::bones': class 'std::vector<Bones::VertexBoneData,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Bones'
           with
           [
               _Ty=Bones::VertexBoneData
           ]
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\bones.h(113): note: vea la declaración de 'std::vector<Bones::VertexBoneData,std::allocator<_Ty>>'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\bones.h(113): note: vea la declaración de 'std::vector<Bones::VertexBoneData,std::allocator<_Ty>>'
           with
           [
               _Ty=Bones::VertexBoneData
           ]
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\mesh.h(54): warning C4251: 'Mesh::textures': class 'std::vector<Texture *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\mesh.h(54): warning C4251: 'Mesh::textures': class 'std::vector<Texture *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
           with
           [
               _Ty=Texture *
           ]
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\mesh.h(54): note: vea la declaración de 'std::vector<Texture *,std::allocator<_Ty>>'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\mesh.h(54): note: vea la declaración de 'std::vector<Texture *,std::allocator<_Ty>>'
           with
           [
               _Ty=Texture *
           ]
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\model.h(66): warning C4251: 'Model::meshes': class 'std::vector<Mesh *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Model'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\model.h(66): warning C4251: 'Model::meshes': class 'std::vector<Mesh *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Model'
           with
           [
               _Ty=Mesh *
           ]
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\model.h(50): note: vea la declaración de 'std::vector<Mesh *,std::allocator<_Ty>>'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\model.h(50): note: vea la declaración de 'std::vector<Mesh *,std::allocator<_Ty>>'
           with
           [
               _Ty=Mesh *
           ]
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\model.h(67): warning C4251: 'Model::textureLoaded': class 'std::vector<Texture *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Model'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\model.h(67): warning C4251: 'Model::textureLoaded': class 'std::vector<Texture *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Model'
           with
           [
               _Ty=Texture *
           ]
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\mesh.h(54): note: vea la declaración de 'std::vector<Texture *,std::allocator<_Ty>>'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\mesh.h(54): note: vea la declaración de 'std::vector<Texture *,std::allocator<_Ty>>'
           with
           [
               _Ty=Texture *
           ]
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\model.h(68): warning C4251: 'Model::directory': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Model'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\model.h(68): warning C4251: 'Model::directory': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Model'
   c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xstring(4373): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\model.h(70): warning C4251: 'Model::m_GlobalInverseTransform': struct 'glm::mat<4,4,glm::f32,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Model'
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(518): note: vea la declaración de 'glm::mat<4,4,glm::f32,0>'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\model.h(72): warning C4251: 'Model::importer': class 'Assimp::Importer' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Model'
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\external\assimp\include\assimp\importer.hpp(115): note: vea la declaración de 'Assimp::Importer'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\terrain.h(50): warning C4251: 'Terrain::heightMap': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Terrain'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\model.h(70): warning C4251: 'Model::m_GlobalInverseTransform': struct 'glm::mat<4,4,glm::f32,0>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Model'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\external\glm\glm\fwd.hpp(518): note: vea la declaración de 'glm::mat<4,4,glm::f32,0>'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\model.h(72): warning C4251: 'Model::importer': class 'Assimp::Importer' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Model'
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\external\assimp\include\assimp\importer.hpp(115): note: vea la declaración de 'Assimp::Importer'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\terrain.h(50): warning C4251: 'Terrain::heightMap': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Terrain'
   c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xstring(4373): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(57): warning C4273: 'matToString': vinculación de DLL incoherente
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(45): note: vea la definición anterior de 'matToString'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(69): warning C4273: 'appendFrame': vinculación de DLL incoherente
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(46): note: vea la definición anterior de 'appendFrame'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(78): warning C4273: 'appendFrame': vinculación de DLL incoherente
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(48): note: vea la definición anterior de 'appendFrame'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(86): warning C4273: 'getKeyFrames': vinculación de DLL incoherente
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(50): note: vea la definición anterior de 'getKeyFrames'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(112): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(128): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(138): warning C4273: 'getKeyRotFrames': vinculación de DLL incoherente
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(51): note: vea la definición anterior de 'getKeyRotFrames'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(153): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(163): warning C4273: 'interpolate': vinculación de DLL incoherente
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(52): note: vea la definición anterior de 'interpolate'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(184): warning C4273: 'interpolate': vinculación de DLL incoherente
-  c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(54): note: vea la definición anterior de 'interpolate'
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(626): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(627): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(628): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(629): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(655): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(657): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(659): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(661): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(663): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\alonz\documents\github\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(663): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-     Creando biblioteca C:\Users\alonz\Documents\GitHub\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\HaloMHOHGOKAA.lib y objeto C:\Users\alonz\Documents\GitHub\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\HaloMHOHGOKAA.exp
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(57): warning C4273: 'matToString': vinculación de DLL incoherente
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(45): note: vea la definición anterior de 'matToString'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(69): warning C4273: 'appendFrame': vinculación de DLL incoherente
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(46): note: vea la definición anterior de 'appendFrame'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(78): warning C4273: 'appendFrame': vinculación de DLL incoherente
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(48): note: vea la definición anterior de 'appendFrame'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(86): warning C4273: 'getKeyFrames': vinculación de DLL incoherente
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(50): note: vea la definición anterior de 'getKeyFrames'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(112): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(128): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(138): warning C4273: 'getKeyRotFrames': vinculación de DLL incoherente
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(51): note: vea la definición anterior de 'getKeyRotFrames'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(153): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(163): warning C4273: 'interpolate': vinculación de DLL incoherente
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(52): note: vea la definición anterior de 'interpolate'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(184): warning C4273: 'interpolate': vinculación de DLL incoherente
+  c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(54): note: vea la definición anterior de 'interpolate'
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(635): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(636): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(637): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(638): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(664): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(666): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(668): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(670): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(672): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(672): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+     Creando biblioteca C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\HaloMHOHGOKAA.lib y objeto C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\HaloMHOHGOKAA.exp
 LINK : warning LNK4098: la biblioteca predeterminada'MSVCRTD' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
   Generando código
-  1 of 716 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
+  1 of 720 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     1 functions had inline decision re-evaluated but remain unchanged
   Generación de código finalizada
-glfw3.lib(context.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(context.obj)' o en 'C:\Users\alonz\Documents\GitHub\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(init.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(init.obj)' o en 'C:\Users\alonz\Documents\GitHub\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(input.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(input.obj)' o en 'C:\Users\alonz\Documents\GitHub\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(monitor.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(monitor.obj)' o en 'C:\Users\alonz\Documents\GitHub\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(vulkan.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(vulkan.obj)' o en 'C:\Users\alonz\Documents\GitHub\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(window.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(window.obj)' o en 'C:\Users\alonz\Documents\GitHub\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(win32_init.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(win32_init.obj)' o en 'C:\Users\alonz\Documents\GitHub\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(win32_joystick.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(win32_joystick.obj)' o en 'C:\Users\alonz\Documents\GitHub\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(win32_monitor.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(win32_monitor.obj)' o en 'C:\Users\alonz\Documents\GitHub\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(win32_time.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(win32_time.obj)' o en 'C:\Users\alonz\Documents\GitHub\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(win32_tls.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(win32_tls.obj)' o en 'C:\Users\alonz\Documents\GitHub\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(win32_window.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(win32_window.obj)' o en 'C:\Users\alonz\Documents\GitHub\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(wgl_context.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(wgl_context.obj)' o en 'C:\Users\alonz\Documents\GitHub\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(egl_context.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(egl_context.obj)' o en 'C:\Users\alonz\Documents\GitHub\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-  14-OpenAL.vcxproj -> C:\Users\alonz\Documents\GitHub\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\HaloMHOHGOKAA.exe
+glfw3.lib(context.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(context.obj)' o en 'C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(init.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(init.obj)' o en 'C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(input.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(input.obj)' o en 'C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(monitor.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(monitor.obj)' o en 'C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(vulkan.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(vulkan.obj)' o en 'C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(window.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(window.obj)' o en 'C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_init.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(win32_init.obj)' o en 'C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_joystick.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(win32_joystick.obj)' o en 'C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_monitor.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(win32_monitor.obj)' o en 'C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_time.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(win32_time.obj)' o en 'C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_tls.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(win32_tls.obj)' o en 'C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_window.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(win32_window.obj)' o en 'C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(wgl_context.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(wgl_context.obj)' o en 'C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(egl_context.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(egl_context.obj)' o en 'C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+  14-OpenAL.vcxproj -> C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\HaloMHOHGOKAA.exe

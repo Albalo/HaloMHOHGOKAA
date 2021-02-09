@@ -65,6 +65,9 @@ Model model343GS;
 Model modelA2Animate;
 //2B
 Model model2BAnimate;
+//Rifle de asalto
+Model modelRifleAsaltoMA5B;
+float auxPosRifleX = 0.0f, auxPosRifleY = 0.0f, auxPosRifleZ = 0.0f;
 // Terrain model instance
 Terrain terrain(-1, -1, 200, 10, "../Textures/MapaAlturasProyecto.png");
 
@@ -95,6 +98,7 @@ int lastMousePosY, offsetY = 0;
 glm::mat4 modelMatrix343 = glm::mat4(1.0f);
 glm::mat4 modelMatrixA2Body = glm::mat4(1.0f);
 glm::mat4 modelMatrix2BBody = glm::mat4(1.0f);
+glm::mat4 modelMatrixMA5B = glm::mat4(1.0f);
 
 int modelSelected = 0;
 bool enableCountSelected = true;
@@ -199,7 +203,12 @@ void init(int width, int height, std::string strTitle, bool bFullScreen) {
 	model2BAnimate.loadModel("../models/FE/Flood_Elite.fbx");
 	model2BAnimate.setShader(&shaderMulLighting);
 
-	camera->setPosition(glm::vec3(0.0, 3.0, 4.0));
+	//Rifle de asalto
+	modelRifleAsaltoMA5B.loadModel("../models/MA5B/MA5B.fbx");
+	modelRifleAsaltoMA5B.setShader(&shaderMulLighting);
+
+	//camera->setPosition(glm::vec3(0.0, 3.0, 4.0));
+	camera->setPosition(glm::vec3(0.0, (double)terrain.getHeightTerrain(0.0, 4.0) + 1.0, 4.0));
 
 	// Definimos el tamanio de la imagen
 	int imageWidth, imageHeight;
@@ -704,12 +713,28 @@ bool processInput(bool continueApplication) {
 		banderaA2Anim = 2;
 	}
 
+	if (glfwGetKey(window, GLFW_KEY_P) == GLFW_PRESS && glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_RELEASE)
+		auxPosRifleX += 0.1f;
+	else if(glfwGetKey(window, GLFW_KEY_P) == GLFW_PRESS && glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
+		auxPosRifleX -= 0.1f;
+	if (glfwGetKey(window, GLFW_KEY_O) == GLFW_PRESS && glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_RELEASE)
+		auxPosRifleY += 0.1f;
+	else if (glfwGetKey(window, GLFW_KEY_O) == GLFW_PRESS && glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
+		auxPosRifleY -= 0.1f;
+	if (glfwGetKey(window, GLFW_KEY_I) == GLFW_PRESS && glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_RELEASE)
+		auxPosRifleZ += 0.1f;
+	else if (glfwGetKey(window, GLFW_KEY_I) == GLFW_PRESS && glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
+		auxPosRifleZ -= 0.1f;
+	if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
+		std::cout << "posicion: (" << auxPosRifleX << ", " << auxPosRifleY << ", " << auxPosRifleZ << ")" << std::endl;
+
 	glfwPollEvents();
 	return continueApplication;
 }
 
 void applicationLoop() {
 	bool psi = true;
+	glm::vec3 playerPositionNow;
 
 	modelMatrix343 = glm::translate(modelMatrix343, glm::vec3(5.0, 5.0, -5.0));
 
@@ -855,6 +880,16 @@ void applicationLoop() {
 		//model2BAnimate.setAnimationIndex(banderaA2Anim);
 		model2BAnimate.render(modelMatrix2BKickBody);
 
+		/********************************************
+		* Rifle de salto
+		*********************************************/
+		glm::mat4 modelMatrixMA5BBody = glm::mat4(modelMatrixMA5B);
+		modelMatrixMA5BBody = glm::translate(modelMatrixMA5BBody, camera->getPosition());
+		glm::mat4 modelMatrixMA5BRight = glm::mat4(modelMatrixMA5BBody);
+		modelMatrixMA5BRight = glm::translate(modelMatrixMA5BRight, glm::vec3(-0.11, -0.12, -0.05));
+		modelMatrixMA5BRight = glm::scale(modelMatrixMA5BRight, glm::vec3(0.03225, 0.03225, 0.03225));
+		modelRifleAsaltoMA5B.setOrientation(glm::vec3(auxPosRifleX, auxPosRifleY, auxPosRifleZ));
+		modelRifleAsaltoMA5B.render(modelMatrixMA5BRight);
 		/*******************************************
 		 * Skybox
 		 *******************************************/
@@ -870,6 +905,12 @@ void applicationLoop() {
 		skyboxSphere.render();
 		glCullFace(oldCullFaceMode);
 		glDepthFunc(oldDepthFuncMode);
+
+		playerPositionNow = camera->getPosition();
+		if (playerPositionNow.y > 1.0)
+			camera->setPosition(glm::vec3(playerPositionNow.x, (double)terrain.getHeightTerrain(playerPositionNow.x, 
+				playerPositionNow.z) + 1.0, playerPositionNow.z));
+		//camera->getFront(glm::vec3())
 
 		// Constantes de animaciones
 
