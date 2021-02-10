@@ -35,8 +35,10 @@
 
 // Include Terrain
 #include "Headers/Terrain.h"
-
 #include "Headers/AnimationUtils.h"
+
+// OpenAL include
+#include <AL/alut.h>
 
 #define ARRAY_SIZE_IN_ELEMENTS(a) (sizeof(a)/sizeof(a[0]))
 
@@ -65,11 +67,46 @@ Model model343GS;
 Model modelA2Animate;
 //2B
 Model model2BAnimate;
+//Bullet
+Model modelB;
 //Rifle de asalto
 Model modelRifleAsaltoMA5B;
 float auxPosRifleX = 0.0f, auxPosRifleY = 0.0f, auxPosRifleZ = 0.0f;
 // Terrain model instance
 Terrain terrain(-1, -1, 200, 10, "../Textures/MapaAlturasProyecto.png");
+
+/**********************
+ * OpenAL config
+ */
+
+ // OpenAL Defines
+#define NUM_BUFFERS 3
+#define NUM_SOURCES 3
+#define NUM_ENVIRONMENTS 1
+// Listener
+ALfloat listenerPos[] = { 0.0, 0.0, 4.0 };
+ALfloat listenerVel[] = { 0.0, 0.0, 0.0 };
+ALfloat listenerOri[] = { 0.0, 0.0, 1.0, 0.0, 1.0, 0.0 };
+// Source 0
+ALfloat source0Pos[] = { -2.0, 0.0, 0.0 };
+ALfloat source0Vel[] = { 0.0, 0.0, 0.0 };
+// Source 1
+ALfloat source1Pos[] = { 2.0, 0.0, 0.0 };
+ALfloat source1Vel[] = { 0.0, 0.0, 0.0 };
+// Source 2
+ALfloat source2Pos[] = { 2.0, 0.0, 0.0 };
+ALfloat source2Vel[] = { 0.0, 0.0, 0.0 };
+// Buffers
+ALuint buffer[NUM_BUFFERS];
+ALuint source[NUM_SOURCES];
+ALuint environment[NUM_ENVIRONMENTS];
+// Configs
+ALsizei size, freq;
+ALenum format;
+ALvoid *data;
+int ch;
+ALboolean loop;
+std::vector<bool> sourcesPlay = { true, true, true };
 
 GLuint textureCespedID, textureWallID, textureWindowID, textureHighwayID, textureLandingPadID;
 GLuint textureTerrainBackgroundID, textureTerrainRID, textureTerrainGID, textureTerrainBID, textureTerrainBlendMapID;
@@ -99,6 +136,7 @@ glm::mat4 modelMatrix343 = glm::mat4(1.0f);
 glm::mat4 modelMatrixA2Body = glm::mat4(1.0f);
 glm::mat4 modelMatrix2BBody = glm::mat4(1.0f);
 glm::mat4 modelMatrixMA5B = glm::mat4(1.0f);
+glm::mat4 modelMatrixBullet = glm::mat4(1.0f);
 
 int modelSelected = 0;
 bool enableCountSelected = true;
@@ -207,8 +245,12 @@ void init(int width, int height, std::string strTitle, bool bFullScreen) {
 	modelRifleAsaltoMA5B.loadModel("../models/MA5B/MA5B.fbx");
 	modelRifleAsaltoMA5B.setShader(&shaderMulLighting);
 
+	//Bala
+	modelB.loadModel("../models/Bullet/Bullet.fbx");
+	modelB.setShader(&shaderMulLighting);
+
 	//camera->setPosition(glm::vec3(0.0, 3.0, 4.0));
-	camera->setPosition(glm::vec3(0.0, (double)terrain.getHeightTerrain(0.0, 4.0) + 1.0, 4.0));
+	camera->setPosition(glm::vec3(4.0, (double)terrain.getHeightTerrain(0.0, 4.0) + 1.0, 0.0));
 
 	// Definimos el tamanio de la imagen
 	int imageWidth, imageHeight;
@@ -569,6 +611,67 @@ void init(int width, int height, std::string strTitle, bool bFullScreen) {
 		std::cout << "Failed to load texture" << std::endl;
 	// Libera la memoria de la textura
 	textureTerrainBlendMap.freeImage(bitmap);
+
+	/*******************************************
+	 * OpenAL init
+	 *******************************************/
+	alutInit(0, nullptr);
+	alListenerfv(AL_POSITION, listenerPos);
+	alListenerfv(AL_VELOCITY, listenerVel);
+	alListenerfv(AL_ORIENTATION, listenerOri);
+	alGetError(); // clear any error messages
+	if (alGetError() != AL_NO_ERROR) {
+		printf("- Error creating buffers !!\n");
+		exit(1);
+	}
+	else {
+		printf("init() - No errors yet.");
+	}
+	// Config source 0
+	// Generate buffers, or else no sound will happen!
+	alGenBuffers(NUM_BUFFERS, buffer);
+	buffer[0] = alutCreateBufferFromFile("../sounds/shot.wav");
+	buffer[1] = alutCreateBufferFromFile("../sounds/mele.wav");
+	buffer[2] = alutCreateBufferFromFile("../sounds/mele2.wav");
+	int errorAlut = alutGetError();
+	if (errorAlut != ALUT_ERROR_NO_ERROR) {
+		printf("- Error open files with alut %d !!\n", errorAlut);
+		exit(2);
+	}
+	
+	alGetError(); /* clear error */
+	alGenSources(NUM_SOURCES, source);
+
+	if (alGetError() != AL_NO_ERROR) {
+		printf("- Error creating sources !!\n");
+		exit(2);
+	}
+	else {
+		printf("init - no errors after alGenSources\n");
+	}
+	alSourcef(source[0], AL_PITCH, 1.0f);
+	alSourcef(source[0], AL_GAIN, 3.0f);
+	alSourcefv(source[0], AL_POSITION, source0Pos);
+	alSourcefv(source[0], AL_VELOCITY, source0Vel);
+	alSourcei(source[0], AL_BUFFER, buffer[0]);
+	alSourcei(source[0], AL_LOOPING, AL_TRUE);
+	alSourcef(source[0], AL_MAX_DISTANCE, 2000);
+
+	alSourcef(source[1], AL_PITCH, 1.0f);
+	alSourcef(source[1], AL_GAIN, 3.0f);
+	alSourcefv(source[1], AL_POSITION, source1Pos);
+	alSourcefv(source[1], AL_VELOCITY, source1Vel);
+	alSourcei(source[1], AL_BUFFER, buffer[1]);
+	alSourcei(source[1], AL_LOOPING, AL_TRUE);
+	alSourcef(source[1], AL_MAX_DISTANCE, 2000);
+
+	alSourcef(source[2], AL_PITCH, 1.0f);
+	alSourcef(source[2], AL_GAIN, 0.3f);
+	alSourcefv(source[2], AL_POSITION, source2Pos);
+	alSourcefv(source[2], AL_VELOCITY, source2Vel);
+	alSourcei(source[2], AL_BUFFER, buffer[2]);
+	alSourcei(source[2], AL_LOOPING, AL_TRUE);
+	alSourcef(source[2], AL_MAX_DISTANCE, 500);
 }
 
 void destroy() {
@@ -593,6 +696,8 @@ void destroy() {
 	modelA2Animate.destroy();
 	model2BAnimate.destroy();
 	model343GS.destroy();
+	modelRifleAsaltoMA5B.destroy();
+	modelB.destroy();
 
 	// Custom objects animate	
 
@@ -738,7 +843,7 @@ void applicationLoop() {
 
 	modelMatrix343 = glm::translate(modelMatrix343, glm::vec3(5.0, 5.0, -5.0));
 
-	modelMatrix2BBody = glm::translate(modelMatrix2BBody, glm::vec3(20.0f, 0.0f, 10.0f));
+	modelMatrix2BBody = glm::translate(modelMatrix2BBody, glm::vec3(0.0f, 1.5f, 5.0f));
 
 	// Variables to interpolation key frames
 
@@ -860,7 +965,7 @@ void applicationLoop() {
 		 *******************************************/
 
 		 /*******************************************
-		  * A2
+		  * A2 -> Flood Human
 		  *******************************************/
 		modelMatrixA2Body[3][1] = terrain.getHeightTerrain(modelMatrixA2Body[3][0], modelMatrixA2Body[3][2]);
 		glm::vec3 aux = glm::vec3(terrain.getNormalTerrain(modelMatrixA2Body[3][0], modelMatrixA2Body[3][2]));
@@ -870,14 +975,16 @@ void applicationLoop() {
 		glm::mat4 modelMatrixA2WalkBody = glm::mat4(modelMatrixA2Body);
 		modelMatrixA2WalkBody = glm::scale(modelMatrixA2WalkBody, glm::vec3(0.003, 0.003, 0.003));
 		modelA2Animate.setAnimationIndex(banderaA2Anim);
+		//if (glfwGetKey(window, GLFW_KEY_X) == GLFW_PRESS)
+		modelA2Animate.setOrientation(glm::vec3(0, 90, 0));
 		modelA2Animate.render(modelMatrixA2WalkBody);
 
 		/*******************************************
-		 * 2B
+		 * 2B -> Flood Elite
 		 *******************************************/
 		glm::mat4 modelMatrix2BKickBody = glm::mat4(modelMatrix2BBody);
-		modelMatrix2BKickBody = glm::scale(modelMatrix2BKickBody, glm::vec3(0.005, 0.005, 0.005));
-		//model2BAnimate.setAnimationIndex(banderaA2Anim);
+		modelMatrix2BKickBody = glm::scale(modelMatrix2BKickBody, glm::vec3(0.003, 0.003, 0.003));
+		model2BAnimate.setOrientation(glm::vec3(0, 90, 0));
 		model2BAnimate.render(modelMatrix2BKickBody);
 
 		/********************************************
@@ -890,6 +997,22 @@ void applicationLoop() {
 		modelMatrixMA5BRight = glm::scale(modelMatrixMA5BRight, glm::vec3(0.03225, 0.03225, 0.03225));
 		modelRifleAsaltoMA5B.setOrientation(glm::vec3(auxPosRifleX, auxPosRifleY, auxPosRifleZ));
 		modelRifleAsaltoMA5B.render(modelMatrixMA5BRight);
+
+		/********************************************
+		* Bala
+		*********************************************/
+		glm::mat4 modelMatrixBulletBody = glm::mat4(modelMatrixBullet);
+		modelMatrixBulletBody = glm::translate(modelMatrixBulletBody, camera->getPosition());
+		modelB.setScale(glm::vec3(0.05, 0.05, 0.05));
+		modelB.setPosition(glm::vec3(-2.5, 0.0, 0.0));
+		modelB.setOrientation(glm::vec3(0, 90, 0));
+		if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)
+			modelB.render(modelMatrixBulletBody);
+			source0Pos[0] = modelMatrixBulletBody[3].x;
+			source0Pos[1] = modelMatrixBulletBody[3].y;
+			source0Pos[2] = modelMatrixBulletBody[3].z;
+			alSourcefv(source[0], AL_POSITION, source0Pos);
+
 		/*******************************************
 		 * Skybox
 		 *******************************************/
@@ -923,6 +1046,61 @@ void applicationLoop() {
 		 // State machine for the lambo car
 
 		glfwSwapBuffers(window);
+
+		/****************************+
+		 * Open AL sound data
+		 */
+/*		source0Pos[0] = modelMatrixBulletBody[3].x;
+		source0Pos[1] = modelMatrixBulletBody[3].y;
+		source0Pos[2] = modelMatrixBulletBody[3].z;
+		alSourcefv(source[0], AL_POSITION, source0Pos);*/
+
+		source2Pos[0] = modelMatrix2BBody[3].x;
+		source2Pos[1] = modelMatrix2BBody[3].y;
+		source2Pos[2] = modelMatrix2BBody[3].z;
+		alSourcefv(source[2], AL_POSITION, source2Pos);
+
+		source1Pos[0] = modelMatrixA2Body[3].x;
+		source1Pos[1] = modelMatrixA2Body[3].y;
+		source1Pos[2] = modelMatrixA2Body[3].z;
+		alSourcefv(source[1], AL_POSITION, source1Pos);
+
+		/*// Listener for the Thris person camera
+		listenerPos[0] = modelMatrixMA5B[3].x;
+		listenerPos[1] = modelMatrixMA5B[3].y;
+		listenerPos[2] = modelMatrixMA5B[3].z;
+		alListenerfv(AL_POSITION, listenerPos);
+
+		glm::vec3 upModel = glm::normalize(modelMatrixMA5B[1]);
+		glm::vec3 frontModel = glm::normalize(modelMatrixMA5B[2]);
+
+		listenerOri[0] = frontModel.x;
+		listenerOri[1] = frontModel.y;
+		listenerOri[2] = frontModel.z;
+		listenerOri[3] = upModel.x;
+		listenerOri[4] = upModel.y;
+		listenerOri[5] = upModel.z;
+		*/
+		// Listener for the First person camera
+		listenerPos[0] = camera->getPosition().x;
+		listenerPos[1] = camera->getPosition().y;
+		listenerPos[2] = camera->getPosition().z;
+		alListenerfv(AL_POSITION, listenerPos);
+		listenerOri[0] = camera->getFront().x;
+		listenerOri[1] = camera->getFront().y;
+		listenerOri[2] = camera->getFront().z;
+		listenerOri[3] = camera->getUp().x;
+		listenerOri[4] = camera->getUp().y;
+		listenerOri[5] = camera->getUp().z;
+		alListenerfv(AL_ORIENTATION, listenerOri);
+
+		for (unsigned int i = 0; i < sourcesPlay.size(); i++) {
+			if (sourcesPlay[i]) {
+				sourcesPlay[i] = false;
+				alSourcePlay(source[i]);
+			}
+		}
+
 	}
 }
 
