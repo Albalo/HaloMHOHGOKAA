@@ -37,6 +37,9 @@
 #include "Headers/Terrain.h"
 #include "Headers/AnimationUtils.h"
 
+// Include Colision headers functions
+#include "Headers/Colisiones.h"
+
 // OpenAL include
 #include <AL/alut.h>
 
@@ -58,6 +61,7 @@ Shader shaderTerrain;
 std::shared_ptr<FirstPersonCamera> camera(new FirstPersonCamera());
 
 Sphere skyboxSphere(20, 20);
+Box boxCollider;
 
 // Models complex instances
 // 343 GS
@@ -151,6 +155,9 @@ bool record = false;
 double deltaTime;
 double currTime, lastTime;
 
+// Colliders
+std::map<std::string, std::tuple<AbstractModel::OBB, glm::mat4, glm::mat4> > collidersOBB;
+
 // Se definen todos las funciones.
 void reshapeCallback(GLFWwindow *Window, int widthRes, int heightRes);
 void keyCallback(GLFWwindow *window, int key, int scancode, int action,
@@ -225,6 +232,10 @@ void init(int width, int height, std::string strTitle, bool bFullScreen) {
 	skyboxSphere.setShader(&shaderSkybox);
 	skyboxSphere.setScale(glm::vec3(20.0f, 20.0f, 20.0f));
 
+	boxCollider.init();
+	boxCollider.setShader(&shaderMulLighting);
+	boxCollider.setColor(glm::vec4(1.0, 1.0, 1.0, 1.0));
+	
 	terrain.init();
 	terrain.setShader(&shaderTerrain);
 	terrain.setPosition(glm::vec3(100, 0, 100));
@@ -688,6 +699,7 @@ void destroy() {
 
 	// Basic objects Delete
 	skyboxSphere.destroy();
+	boxCollider.destroy();
 
 	// Terrains objects Delete
 	terrain.destroy();
@@ -843,7 +855,7 @@ void applicationLoop() {
 
 	modelMatrix343 = glm::translate(modelMatrix343, glm::vec3(5.0, 5.0, -5.0));
 
-	modelMatrix2BBody = glm::translate(modelMatrix2BBody, glm::vec3(0.0f, 1.5f, 5.0f));
+	modelMatrix2BBody = glm::translate(modelMatrix2BBody, glm::vec3(5.0f, 1.5f, 5.0f));
 
 	// Variables to interpolation key frames
 
@@ -859,6 +871,8 @@ void applicationLoop() {
 		TimeManager::Instance().CalculateFrameRate(true);
 		deltaTime = TimeManager::Instance().DeltaTime;
 		psi = processInput(true);
+
+		std::map<std::string, bool> collisionDetection;
 
 		// Variables donde se guardan las matrices de cada articulacion por 1 frame
 		std::vector<float> matrixDartJoints;
@@ -983,7 +997,7 @@ void applicationLoop() {
 		 * 2B -> Flood Elite
 		 *******************************************/
 		glm::mat4 modelMatrix2BKickBody = glm::mat4(modelMatrix2BBody);
-		modelMatrix2BKickBody = glm::scale(modelMatrix2BKickBody, glm::vec3(0.003, 0.003, 0.003));
+		modelMatrix2BKickBody = glm::scale(modelMatrix2BKickBody, glm::vec3(0.002, 0.002, 0.002));
 		model2BAnimate.setOrientation(glm::vec3(0, 90, 0));
 		model2BAnimate.render(modelMatrix2BKickBody);
 
@@ -1028,6 +1042,109 @@ void applicationLoop() {
 		skyboxSphere.render();
 		glCullFace(oldCullFaceMode);
 		glDepthFunc(oldDepthFuncMode);
+
+		/*******************************************
+		 * Creacion de colliders
+		 * IMPORTANT do this before interpolations
+		 *******************************************/
+		 //A2 collider -> Flood Elite
+		AbstractModel::OBB A2Collider;
+		glm::mat4 modelMatrixColliderA2 = glm::mat4(modelMatrixA2WalkBody);
+		modelMatrixColliderA2 = glm::rotate(modelMatrixColliderA2, glm::radians(-90.0f), glm::vec3(1.0, 0.0, 0.0));
+		// Antes de escalar la matriz del collider hay que tener la orientación
+		A2Collider.u = glm::quat_cast(modelMatrixColliderA2);
+		modelMatrixColliderA2 = glm::scale(modelMatrixColliderA2, glm::vec3(0.1, 0.1, 0.1));
+		modelMatrixColliderA2 = glm::translate(modelMatrixColliderA2, modelA2Animate.getObb().c);
+		A2Collider.c = modelMatrixColliderA2[3];
+		A2Collider.e = modelA2Animate.getObb().e * glm::vec3(0.05, 0.05, 0.05);// *glm::vec3(0.75, 0.75, 0.75);
+		addOrUpdateColliders(collidersOBB, "A2", A2Collider, modelMatrixA2WalkBody);
+
+		//2B collider -> Flood Human
+		AbstractModel::OBB B2BCollider;
+		glm::mat4 modelMatrixCollider2B = glm::mat4(modelMatrix2BKickBody);
+		modelMatrixCollider2B = glm::rotate(modelMatrixCollider2B, glm::radians(-90.0f), glm::vec3(1.0, 0.0, 0.0));
+		// Antes de escalar la matriz del collider hay que tener la orientación
+		B2BCollider.u = glm::quat_cast(modelMatrixCollider2B);
+		modelMatrixCollider2B = glm::scale(modelMatrixCollider2B, glm::vec3(0.1, 0.1, 0.1));
+		modelMatrixCollider2B = glm::translate(modelMatrixCollider2B, model2BAnimate.getObb().c);
+		B2BCollider.c = modelMatrixCollider2B[3];
+		B2BCollider.e = model2BAnimate.getObb().e * glm::vec3(0.05, 0.05, 0.05); 
+		addOrUpdateColliders(collidersOBB, "2B", B2BCollider, modelMatrix2BKickBody);
+
+		//Rifle de asalto MA5B
+		AbstractModel::OBB MA5BCollider;
+		glm::mat4 modelMatrixColliderMA5B = glm::mat4(modelMatrixMA5BBody);
+		modelMatrixColliderMA5B = glm::rotate(modelMatrixColliderMA5B, glm::radians(-90.0f), glm::vec3(1.0, 0.0, 0.0));
+		// Antes de escalar la matriz del collider hay que tener la orientación
+		MA5BCollider.u = glm::quat_cast(modelMatrixColliderMA5B);
+		modelMatrixColliderMA5B = glm::scale(modelMatrixColliderMA5B, glm::vec3(0.05, 0.05, 0.05));
+		modelMatrixColliderMA5B = glm::translate(modelMatrixColliderMA5B, modelRifleAsaltoMA5B.getObb().c);
+		MA5BCollider.c = modelMatrixColliderMA5B[3];
+		MA5BCollider.e = modelRifleAsaltoMA5B.getObb().e * glm::vec3(0.3, 0.3, 0.3);
+		addOrUpdateColliders(collidersOBB, "MA5B", MA5BCollider, modelMatrixMA5BBody);
+
+		//Bala
+/*		AbstractModel::OBB Bala;
+		glm::mat4 modelMatrixColliderBullet = glm::mat4(modelMatrixBullet);
+		modelMatrixColliderBullet = glm::rotate(modelMatrixColliderBullet, glm::radians(-90.0f), glm::vec3(1.0, 0.0, 0.0));
+		// Antes de escalar la matriz del collider hay que tener la orientación
+		Bala.u = glm::quat_cast(modelMatrixColliderBullet);
+		modelMatrixColliderBullet = glm::scale(modelMatrixColliderBullet, glm::vec3(0.05, 0.05, 0.05));
+		modelMatrixColliderBullet = glm::translate(modelMatrixColliderBullet, modelB.getObb().c);
+		Bala.c = modelMatrixColliderBullet[3];
+		Bala.e = modelB.getObb().e * glm::vec3(0.05, 0.05, 0.05);
+		addOrUpdateColliders(collidersOBB, "Bala", Bala, modelMatrixBullet);*/
+
+		/*******************************************
+		 * Render de colliders
+		 *******************************************/
+		for (std::map<std::string, std::tuple<AbstractModel::OBB, glm::mat4, glm::mat4> >::iterator it =
+			collidersOBB.begin(); it != collidersOBB.end(); it++) {
+			glm::mat4 matrixCollider = glm::mat4(1.0);
+			matrixCollider = glm::translate(matrixCollider, std::get<0>(it->second).c);
+			matrixCollider = matrixCollider * glm::mat4(std::get<0>(it->second).u);
+			matrixCollider = glm::scale(matrixCollider, std::get<0>(it->second).e * 2.0f);
+			boxCollider.setColor(glm::vec4(1.0, 1.0, 1.0, 1.0));
+			boxCollider.enableWireMode();
+			boxCollider.render(matrixCollider);
+		}
+
+		/*******************************************
+		*Pruebas de colisión
+		********************************************/
+		//Colisión caja vs caja
+		for (std::map<std::string, std::tuple<AbstractModel::OBB, glm::mat4, glm::mat4> > ::iterator it = collidersOBB.begin(); it != collidersOBB.end(); it++) {
+			bool isCollision = false;
+			for (std::map<std::string, std::tuple<AbstractModel::OBB, glm::mat4, glm::mat4> > ::iterator jt = collidersOBB.begin(); jt != collidersOBB.end(); jt++) {
+				if (it != jt && testOBBOBB(std::get<0>(it->second), std::get<0>(jt->second))) {
+					std::cout << "Collision " << it->first << " with " << jt->first << std::endl;
+					isCollision = true;
+				}
+			}
+			addOrUpdateCollisionDetection(collisionDetection, it->first, isCollision);
+		}
+
+		//Colisión y "bloqueo" del paso
+		std::map<std::string, bool>::iterator colIt;
+		for (colIt = collisionDetection.begin(); colIt != collisionDetection.end(); colIt++) {
+			//OBB's
+			std::map<std::string, std::tuple<AbstractModel::OBB, glm::mat4, glm::mat4> > ::iterator it = collidersOBB.find(colIt->first);
+			//Validamos si encontró el elemento caja
+			if (it != collidersOBB.end()) {
+				if (!colIt->second)
+					addOrUpdateColliders(collidersOBB, it->first);
+				else {
+					if (it->first.compare("2B") == 0)
+						modelMatrix2BKickBody = std::get<1>(it->second);
+					if (it->first.compare("MA5B") == 0)
+						modelMatrixMA5BBody = std::get<1>(it->second);
+					if (it->first.compare("Bala") == 0)
+						modelMatrixBullet = std::get<1>(it->second);
+					if (it->first.compare("A2") == 0)
+						modelMatrixA2WalkBody = std::get<1>(it->second);
+				}
+			}
+		}
 
 		playerPositionNow = camera->getPosition();
 		if (playerPositionNow.y > 1.0)
@@ -1105,7 +1222,7 @@ void applicationLoop() {
 }
 
 int main(int argc, char **argv) {
-	init(800, 700, "Test", false);
+	init(800, 700, "HALOMHOHGOKAA", false);
 	applicationLoop();
 	destroy();
 	return 1;
