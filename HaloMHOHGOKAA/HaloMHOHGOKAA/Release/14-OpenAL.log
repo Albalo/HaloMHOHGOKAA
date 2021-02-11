@@ -172,22 +172,22 @@ c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadap
 c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(184): warning C4273: 'interpolate': vinculación de DLL incoherente
   c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\animationutils.h(54): note: vea la definición anterior de 'interpolate'
 c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\cgalib\include\headers\colisiones.h(133): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
-c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(759): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(760): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(761): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(762): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(788): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(790): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(792): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(794): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(796): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(796): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(768): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(769): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(770): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(771): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(797): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(799): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(801): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(803): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(805): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\shosu\documents\visual studio 2017\proyects\computaciongraficaavanzadaproyecto\halomhohgokaa\halomhohgokaa\halomhohgokaa\src\main.cpp(805): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
      Creando biblioteca C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\HaloMHOHGOKAA.lib y objeto C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\HaloMHOHGOKAA.exp
 LINK : warning LNK4098: la biblioteca predeterminada'MSVCRTD' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
   Generando código
-  1 of 1149 functions (<0.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+  3 of 1152 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
   Generación de código finalizada
 glfw3.lib(context.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(context.obj)' o en 'C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
 glfw3.lib(init.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(init.obj)' o en 'C:\Users\shosu\Documents\Visual Studio 2017\Proyects\ComputacionGraficaAvanzadaProyecto\HaloMHOHGOKAA\HaloMHOHGOKAA\Release\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración

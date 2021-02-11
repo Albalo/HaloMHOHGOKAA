@@ -78,6 +78,9 @@ Model modelRifleAsaltoMA5B;
 // Modelo del jugador.
 Model modelPlayer;
 float auxPosRifleX = 0.0f, auxPosRifleY = 0.0f, auxPosRifleZ = 0.0f;
+float auxEscalePlatformX = 1.0f, auxEscalePlatformZ = 1.0f;
+// Modelo de la plataforma
+Model modelPlatform;
 // Terrain model instance
 Terrain terrain(-1, -1, 200, 10, "../Textures/MapaAlturasProyecto.png");
 
@@ -144,6 +147,7 @@ glm::mat4 modelMatrix2BBody = glm::mat4(1.0f);
 glm::mat4 modelMatrixMA5B = glm::mat4(1.0f);
 glm::mat4 modelMatrixBullet = glm::mat4(1.0f);
 glm::mat4 modelMatrixPlayer = glm::mat4(1.0f);
+glm::mat4 modeMatrixPlatform = glm::mat4(1.0f);
 int modelSelected = 0;
 bool enableCountSelected = true;
 int banderaA2Anim = 0;
@@ -266,8 +270,12 @@ void init(int width, int height, std::string strTitle, bool bFullScreen) {
 	modelPlayer.loadModel("../models/HaloPlayer/HaloPlayerBody.fbx");
 	modelPlayer.setShader(&shaderMulLighting);
 
+	// Platform
+	modelPlatform.loadModel("../models/HaloLibrary/HaloLibrary.fbx");
+	modelPlatform.setShader(&shaderMulLighting);
+
 	//camera->setPosition(glm::vec3(0.0, 3.0, 4.0));
-	camera->setPosition(glm::vec3(4.0, (double)terrain.getHeightTerrain(0.0, 4.0) + 1.0, 0.0));
+	camera->setPosition(glm::vec3(0.0, (double)terrain.getHeightTerrain(0.0, 4.0) + 1.0, 4.0));
 
 	// Definimos el tamanio de la imagen
 	int imageWidth, imageHeight;
@@ -717,6 +725,7 @@ void destroy() {
 	modelRifleAsaltoMA5B.destroy();
 	modelB.destroy();
 	modelPlayer.destroy();
+	modelPlatform.destroy();
 
 	// Custom objects animate	
 
@@ -849,8 +858,18 @@ bool processInput(bool continueApplication) {
 		auxPosRifleZ += 0.1f;
 	else if (glfwGetKey(window, GLFW_KEY_I) == GLFW_PRESS && glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
 		auxPosRifleZ -= 0.1f;
+	if (glfwGetKey(window, GLFW_KEY_U) == GLFW_PRESS && glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_RELEASE)
+		auxEscalePlatformX += 0.1f;
+	else if (glfwGetKey(window, GLFW_KEY_U) == GLFW_PRESS && glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
+		auxEscalePlatformX -= 0.1f;
+	if (glfwGetKey(window, GLFW_KEY_Y) == GLFW_PRESS && glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_RELEASE)
+		auxEscalePlatformZ += 0.1f;
+	else if (glfwGetKey(window, GLFW_KEY_Y) == GLFW_PRESS && glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
+		auxEscalePlatformZ -= 0.1f;
 	if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
 		std::cout << "posicion: (" << auxPosRifleX << ", " << auxPosRifleY << ", " << auxPosRifleZ << ")" << std::endl;
+	if (glfwGetKey(window, GLFW_KEY_L) == GLFW_PRESS)
+		std::cout << "Escala: (" << auxEscalePlatformX << ", 1.0,  " << auxEscalePlatformZ << ")" << std::endl;
 
 	glfwPollEvents();
 	return continueApplication;
@@ -943,9 +962,12 @@ void applicationLoop() {
 		/*******************************************
 		 * Terrain Cesped
 		 *******************************************/
-		glm::mat4 modelCesped = glm::mat4(1.0);
-		modelCesped = glm::translate(modelCesped, glm::vec3(0.0, 0.0, 0.0));
-		modelCesped = glm::scale(modelCesped, glm::vec3(200.0, 0.001, 200.0));
+		modeMatrixPlatform[3][1] = terrain.getHeightTerrain(modeMatrixPlatform[3][0], modeMatrixPlatform[3][2]) + 1;
+		glm::mat4 modelCesped = glm::mat4(modeMatrixPlatform);
+		modelCesped = glm::translate(modelCesped, glm::vec3(42.6999, 0.0, 10.3));
+		modelCesped = glm::rotate(modelCesped, glm::radians(-90.0f), glm::vec3(1.0, 0.0, 0.0));
+		modelCesped = glm::scale(modelCesped, glm::vec3(5.9, 0.7, 1.0));
+		modelPlatform.render(modelCesped);
 		// Se activa la textura del background
 		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, textureTerrainBackgroundID);
@@ -1016,7 +1038,7 @@ void applicationLoop() {
 		glm::mat4 modelMatrixMA5BRight = glm::mat4(modelMatrixMA5BBody);
 		modelMatrixMA5BRight = glm::translate(modelMatrixMA5BRight, glm::vec3(-0.11, -0.12, -0.05));
 		modelMatrixMA5BRight = glm::scale(modelMatrixMA5BRight, glm::vec3(0.03225, 0.03225, 0.03225));
-		modelRifleAsaltoMA5B.setOrientation(glm::vec3(auxPosRifleX, auxPosRifleY, auxPosRifleZ));
+		//modelRifleAsaltoMA5B.setOrientation(glm::vec3(auxPosRifleX, auxPosRifleY, auxPosRifleZ));
 		modelRifleAsaltoMA5B.render(modelMatrixMA5BRight);
 
 		/********************************************
@@ -1166,6 +1188,7 @@ void applicationLoop() {
 			camera->setPosition(glm::vec3(playerPositionNow.x, (double)terrain.getHeightTerrain(playerPositionNow.x, 
 				playerPositionNow.z) + 1.0, playerPositionNow.z));
 		//camera->getFront(glm::vec3())
+		
 
 		// Constantes de animaciones
 
