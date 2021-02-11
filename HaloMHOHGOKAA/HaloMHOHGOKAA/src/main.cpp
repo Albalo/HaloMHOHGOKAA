@@ -75,6 +75,8 @@ Model model2BAnimate;
 Model modelB;
 //Rifle de asalto
 Model modelRifleAsaltoMA5B;
+// Modelo del jugador.
+Model modelPlayer;
 float auxPosRifleX = 0.0f, auxPosRifleY = 0.0f, auxPosRifleZ = 0.0f;
 // Terrain model instance
 Terrain terrain(-1, -1, 200, 10, "../Textures/MapaAlturasProyecto.png");
@@ -141,7 +143,7 @@ glm::mat4 modelMatrixA2Body = glm::mat4(1.0f);
 glm::mat4 modelMatrix2BBody = glm::mat4(1.0f);
 glm::mat4 modelMatrixMA5B = glm::mat4(1.0f);
 glm::mat4 modelMatrixBullet = glm::mat4(1.0f);
-
+glm::mat4 modelMatrixPlayer = glm::mat4(1.0f);
 int modelSelected = 0;
 bool enableCountSelected = true;
 int banderaA2Anim = 0;
@@ -259,6 +261,10 @@ void init(int width, int height, std::string strTitle, bool bFullScreen) {
 	//Bala
 	modelB.loadModel("../models/Bullet/Bullet.fbx");
 	modelB.setShader(&shaderMulLighting);
+
+	// Player
+	modelPlayer.loadModel("../models/HaloPlayer/HaloPlayerBody.fbx");
+	modelPlayer.setShader(&shaderMulLighting);
 
 	//camera->setPosition(glm::vec3(0.0, 3.0, 4.0));
 	camera->setPosition(glm::vec3(4.0, (double)terrain.getHeightTerrain(0.0, 4.0) + 1.0, 0.0));
@@ -710,6 +716,7 @@ void destroy() {
 	model343GS.destroy();
 	modelRifleAsaltoMA5B.destroy();
 	modelB.destroy();
+	modelPlayer.destroy();
 
 	// Custom objects animate	
 
@@ -1012,6 +1019,14 @@ void applicationLoop() {
 		modelRifleAsaltoMA5B.setOrientation(glm::vec3(auxPosRifleX, auxPosRifleY, auxPosRifleZ));
 		modelRifleAsaltoMA5B.render(modelMatrixMA5BRight);
 
+		/********************************************
+		* Personaje
+		*********************************************/
+		modelMatrixPlayer[3][1] = terrain.getHeightTerrain(modelMatrixPlayer[3][0], modelMatrixPlayer[3][2]);
+		glm::mat4 modelMatrixPlayerBody = glm::mat4(modelMatrixPlayer);
+		modelMatrixPlayerBody = glm::translate(modelMatrixPlayerBody, glm::vec3(1.0, 0.0, 1.0));
+		modelMatrixPlayerBody = glm::scale(modelMatrixPlayerBody, glm::vec3(0.125, 0.125, 0.125));
+		modelPlayer.render(modelMatrixPlayerBody);
 		/********************************************
 		* Bala
 		*********************************************/
